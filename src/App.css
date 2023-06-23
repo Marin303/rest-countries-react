@@ -8,6 +8,7 @@
 
 .App {
   font-family: 'Nunito Sans', sans-serif;
+  height: 100vh;
 }
 
 header {
@@ -31,4 +32,46 @@ header>div {
 
 .moonIcon {
   margin-right: 5px;
+}
+
+.containerBody {
+  background-color: hsl(207, 26%, 17%);
+  height: 100%;
+  padding: 50px;
+}
+
+.inputFormWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input {
+  min-width: 40%;
+  padding: 15px;
+  /* margin-bottom: 10px; */
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: white;
+}
+
+form {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: hsl(209, 23%, 22%);
+
+  color: white;
+}
+
+select {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  padding-right: 20px;
 }

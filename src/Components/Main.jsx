@@ -1,17 +1,23 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
 
 const Main = () => {
   return (
-    <div>
-      <header>
-        <p>Where in the world?</p>
-        <div>
-          <FontAwesomeIcon icon={faMoon} className="moonIcon" />
-          Dark Mode
-        </div>
-      </header>
+    <div className="containerBody">
+      <div className="inputFormWrapper">
+        <input type="text" placeholder="Search for a country..." />
+        <form>
+          <select name="region" id="region" defaultValue="default">
+            <option value="default" disabled hidden>
+              Filter by Region
+            </option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </form>
+      </div>
     </div>
   );
 };
