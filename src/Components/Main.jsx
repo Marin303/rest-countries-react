@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import CountryRender from "./CountryRender";
 
-const Main = () => {
+const Main = ({ darkMode }) => {
   const [active, setActive] = useState(false);
   const selectRef = useRef(null);
   const [inputValue, setInputValue] = useState("");
@@ -38,7 +38,7 @@ const Main = () => {
   };
  
   return (
-    <div className="containerBody">
+    <div className={`containerBody ${darkMode ? "" : "light"}`}>
       <div className="inputFormWrapper">
         <div className="inputIconWrapper">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -75,7 +75,7 @@ const Main = () => {
           </div>
         </button>
       </div>
-      <CountryRender inputValue={inputValue} selectedRegion={selectedRegion} />
+      <CountryRender inputValue={inputValue} selectedRegion={selectedRegion} darkMode={darkMode} />
     </div>
   );
 };

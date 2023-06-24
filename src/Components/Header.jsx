@@ -1,19 +1,20 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({ darkMode, onModeToggle }) => {
   return (
-    <div>
-      <header>
-        <p>Where in the world?</p>
-        <div>
-          <FontAwesomeIcon icon={faMoon} className="moonIcon" />
-          Dark Mode
-        </div>
-      </header>
+    <div className="header">
+      <p>Where in the world?</p>
+      <button onClick={onModeToggle}>
+        <FontAwesomeIcon
+          icon={darkMode ? faSun : faMoon}
+          className="modeIcon"
+        />
+        {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
     </div>
   );
-}
+};
 
 export default Header;

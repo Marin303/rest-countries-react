@@ -14,26 +14,28 @@
   flex-direction: column;
 }
 
-header {
+.header {
   display: flex;
   padding: 20px;
   justify-content: space-between;
   background-color: hsl(209, 23%, 22%);
 }
 
-header>p {
+.header>p {
   color: rgb(255, 255, 255);
   font-weight: 600;
   margin-left: 5px;
 }
 
-header>div {
+.header>button {
   word-spacing: 2px;
   font-size: 14px;
   margin-right: 5px;
+  background-color: transparent;
+  border: none;
 }
 
-.moonIcon {
+.modeIcon {
   margin-right: 5px;
 }
 
@@ -147,6 +149,14 @@ input::placeholder {
   font-weight: 600;
   margin-bottom: 15px;
 }
+
+/*light mode styles*/
+
+
+
+
+
+
 
 @media only screen and (max-width: 480px) {
   .inputIconWrapper {
