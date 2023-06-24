@@ -1,6 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faMagnifyingGlass,faCaretDown} from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  faCaretDown,
+} from "@fortawesome/free-solid-svg-icons";
+import CountryRender from "./CountryRender";
 
 const Main = () => {
   const [active, setActive] = useState(false);
@@ -43,6 +47,7 @@ const Main = () => {
           </div>
         </button>
       </div>
+      <CountryRender />
     </div>
   );
 };
