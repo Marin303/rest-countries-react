@@ -12,7 +12,13 @@ const CountryRender = () => {
     <div className="CountryContainer">
       {data.slice(0, 10).map((country, index) => (
         <div className="CountryRender" key={index}>
-          {country.name}
+          <img src={country.flags.png} alt="" />
+          <div className="descriptionWrapper">
+            <p>{country.name}</p>
+            <p><b>Population:</b> {country.population}</p>
+            <p><b>Region:</b> {country.region}</p>
+            <p><b>Capital:</b> {country.capital}</p>
+          </div>
         </div>
       ))}
     </div>
