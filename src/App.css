@@ -46,32 +46,76 @@ header>div {
   justify-content: space-between;
 }
 
-input {
+.inputIconWrapper {
+  display: flex;
+  align-items: center; 
   min-width: 40%;
-  padding: 15px;
-  /* margin-bottom: 10px; */
   background-color: hsl(209, 23%, 22%);
   color: hsl(0, 0%, 100%);
-  outline: none;
-  border: none;
   border-radius: 5px;
+  border: 1px solid transparent;
+  padding-left: 10px;
+}
+
+input {
+  color: hsl(0, 0%, 100%);
+  border: none;
+  outline: none;
+  width: 90%;
+  padding: 15px;
+  background-color: hsl(209, 23%, 22%);
 }
 
 input::placeholder {
   color: white;
 }
 
-form {
-  padding: 15px;
-  border-radius: 5px;
-  background-color: hsl(209, 23%, 22%);
-
-  color: white;
+.inputIconWrapper:hover {
+  border: 1px solid white;
 }
 
-select {
-  background-color: inherit;
-  border: none;
-  color: inherit;
-  padding-right: 20px;
+.select {
+  position: relative;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid transparent;
+  background-color: hsl(209, 23%, 22%);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.caretDown {
+  margin-left: 5px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: hsl(209, 23%, 22%);
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.select:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  input {
+    margin-bottom: 10px;
+  }
 }

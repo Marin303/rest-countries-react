@@ -1,22 +1,26 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Main = () => {
   return (
     <div className="containerBody">
       <div className="inputFormWrapper">
-        <input type="text" placeholder="Search for a country..." />
-        <form>
-          <select name="region" id="region" defaultValue="default">
-            <option value="default" disabled hidden>
-              Filter by Region
-            </option>
-            <option value="Africa">Africa</option>
-            <option value="America">America</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
-          </select>
-        </form>
+        <div className="inputIconWrapper">
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <input type="text" placeholder="Search for a country..." />
+        </div>
+        <div className="select">
+          Filter by Region
+          <FontAwesomeIcon icon={faCaretDown} className="caretDown" />
+          <div className="dropdown">
+            <a href="#">Africa</a>
+            <a href="#">America</a>
+            <a href="#">Asia</a>
+            <a href="#">Europe</a>
+            <a href="#">Oceania</a>
+          </div>
+        </div>
       </div>
     </div>
   );
