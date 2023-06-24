@@ -88,25 +88,24 @@ input::placeholder {
 }
 
 .caretDown {
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 .dropdown {
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
   display: none;
+  text-align: left;
   background-color: hsl(209, 23%, 22%);
   border-radius: 5px;
   padding: 10px;
   min-width: 100%;
   z-index: 1;
 }
-
-.select:hover .dropdown {
+.dropdown.active {
   display: block;
 }
-
 .dropdown a {
   display: block;
   color: white;
@@ -115,7 +114,7 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 480px) {
-  input {
+  .inputIconWrapper {
     margin-bottom: 10px;
   }
 }
