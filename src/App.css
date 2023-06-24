@@ -4,10 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .App {
-  font-family: 'Nunito Sans', sans-serif;
   height: 100vh;
 }
 
@@ -16,10 +17,10 @@ header {
   padding: 20px;
   justify-content: space-between;
   background-color: hsl(209, 23%, 22%);
-  color: hsl(0, 0%, 100%);
 }
 
 header>p {
+  color: rgb(255, 255, 255);
   font-weight: 600;
   margin-left: 5px;
 }
@@ -48,17 +49,15 @@ header>div {
 
 .inputIconWrapper {
   display: flex;
-  align-items: center; 
+  align-items: center;
   min-width: 40%;
   background-color: hsl(209, 23%, 22%);
-  color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border: 1px solid transparent;
   padding-left: 10px;
 }
 
 input {
-  color: hsl(0, 0%, 100%);
   border: none;
   outline: none;
   width: 90%;
@@ -67,16 +66,15 @@ input {
 }
 
 input::placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .inputIconWrapper:hover {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .select {
   position: relative;
-  color: white;
   border-radius: 5px;
   padding: 15px;
   border: 1px solid transparent;
@@ -103,12 +101,14 @@ input::placeholder {
   min-width: 100%;
   z-index: 1;
 }
+
 .dropdown.active {
   display: block;
 }
+
 .dropdown a {
   display: block;
-  color: white;
+
   text-decoration: none;
   padding: 5px 10px;
 }
