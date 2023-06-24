@@ -9,6 +9,8 @@ import CountryRender from "./CountryRender";
 const Main = () => {
   const [active, setActive] = useState(false);
   const selectRef = useRef(null);
+  const [inputValue, setInputValue] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("All");
 
   const handleActiveClick = () => {
     setActive(!active);
@@ -27,27 +29,53 @@ const Main = () => {
     };
   }, []);
 
-  /* eslint-disable jsx-a11y/anchor-is-valid */
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleRegionSelect = (region) => {
+    setSelectedRegion(region);
+  };
+ 
   return (
     <div className="containerBody">
       <div className="inputFormWrapper">
         <div className="inputIconWrapper">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
-          <input type="text" placeholder="Search for a country..." />
+          <input
+            type="text"
+            placeholder="Search for a country..."
+            value={inputValue}
+            onChange={handleInputChange}
+          />
         </div>
         <button className="select" onClick={handleActiveClick} ref={selectRef}>
           Filter by Region
           <FontAwesomeIcon icon={faCaretDown} className="caretDown" />
           <div className={`dropdown ${active ? "active" : ""}`}>
-            <a href="#">Africa</a>
-            <a href="#">America</a>
-            <a href="#">Asia</a>
-            <a href="#">Europe</a>
-            <a href="#">Oceania</a>
+            
+             <a href="/#" onClick={() => handleRegionSelect("All")}>
+              All
+            </a>
+            <a href="/#" onClick={() => handleRegionSelect("Africa")}>
+              Africa
+            </a>
+            <a href="/#" onClick={() => handleRegionSelect("Americas")}>
+              America
+            </a>
+            <a href="/#" onClick={() => handleRegionSelect("Asia")}>
+              Asia
+            </a>
+            <a href="/#" onClick={() => handleRegionSelect("Europe")}>
+              Europe
+            </a>
+            <a href="/#" onClick={() => handleRegionSelect("Oceania")}>
+              Oceania
+            </a>
           </div>
         </button>
       </div>
-      <CountryRender />
+      <CountryRender inputValue={inputValue} selectedRegion={selectedRegion} />
     </div>
   );
 };
