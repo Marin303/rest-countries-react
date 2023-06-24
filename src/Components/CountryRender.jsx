@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import jsonData from "../data.json";
 
 const CountryRender = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(jsonData);
+  }, []);
+
   return (
     <div className="CountryContainer">
-      <div className="CountryRender"></div>
-      <div className="CountryRender"></div>
-      <div className="CountryRender"></div>
-      <div className="CountryRender"></div>
-      <div className="CountryRender"></div>
-      <div className="CountryRender"></div>
-      <div className="CountryRender"></div>
-      <div className="CountryRender"></div>
+      {data.slice(0, 10).map((country, index) => (
+        <div className="CountryRender" key={index}>
+          {country.name}
+        </div>
+      ))}
     </div>
   );
 };
