@@ -7,4 +7,3 @@ npm i --save @fortawesome/react-fontawesome@latest
 ```
 npm i --save @fortawesome/free-solid-svg-icons
 ```
-

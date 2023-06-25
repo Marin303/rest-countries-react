@@ -1,9 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMagnifyingGlass,
-  faCaretDown,
-} from "@fortawesome/free-solid-svg-icons";
+import {faMagnifyingGlass,faCaretDown,} from "@fortawesome/free-solid-svg-icons";
 import CountryRender from "./CountryRender";
 
 const Main = ({ darkMode }) => {
@@ -47,7 +44,7 @@ const Main = ({ darkMode }) => {
             placeholder="Search for a country..."
             value={inputValue}
             onChange={handleInputChange}
-            className={darkMode ? "" : "light"}
+            className={`${darkMode ? "" : "light"}`}
           />
         </div>
         <button

@@ -5,13 +5,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito Sans', sans-serif;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .App {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .header {
@@ -35,6 +35,7 @@
   background-color: transparent;
   border: none;
   font-weight: 800;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .modeIcon {
@@ -70,6 +71,7 @@ input {
   width: 90%;
   padding: 15px;
   background-color: hsl(209, 23%, 22%);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 input::placeholder {
@@ -90,6 +92,7 @@ input::placeholder {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .caretDown {
@@ -172,8 +175,10 @@ input.light::placeholder,
 }
 
 /* .header.light .modeIcon {
-  background-color: black;
-} */
+  color: white;
+}
+ */
+
 .dropdown.light {
   background-color: white;
 }
