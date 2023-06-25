@@ -36,25 +36,33 @@ const Main = ({ darkMode }) => {
   const handleRegionSelect = (region) => {
     setSelectedRegion(region);
   };
- 
+
   return (
     <div className={`containerBody ${darkMode ? "" : "light"}`}>
       <div className="inputFormWrapper">
-        <div className="inputIconWrapper">
+        <div className={`inputIconWrapper ${darkMode ? "" : "light"}`}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
           <input
             type="text"
             placeholder="Search for a country..."
             value={inputValue}
             onChange={handleInputChange}
+            className={darkMode ? "" : "light"}
           />
         </div>
-        <button className="select" onClick={handleActiveClick} ref={selectRef}>
+        <button
+          className={`select ${darkMode ? "" : "light"}`}
+          onClick={handleActiveClick}
+          ref={selectRef}
+        >
           Filter by Region
           <FontAwesomeIcon icon={faCaretDown} className="caretDown" />
-          <div className={`dropdown ${active ? "active" : ""}`}>
-            
-             <a href="/#" onClick={() => handleRegionSelect("All")}>
+          <div
+            className={`dropdown ${active ? "active" : ""} ${
+              darkMode ? "" : "light"
+            }`}
+          >
+            <a href="/#" onClick={() => handleRegionSelect("All")}>
               All
             </a>
             <a href="/#" onClick={() => handleRegionSelect("Africa")}>
@@ -75,7 +83,11 @@ const Main = ({ darkMode }) => {
           </div>
         </button>
       </div>
-      <CountryRender inputValue={inputValue} selectedRegion={selectedRegion} darkMode={darkMode} />
+      <CountryRender
+        inputValue={inputValue}
+        selectedRegion={selectedRegion}
+        darkMode={darkMode}
+      />
     </div>
   );
 };

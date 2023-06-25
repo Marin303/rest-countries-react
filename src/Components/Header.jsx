@@ -4,7 +4,7 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ darkMode, onModeToggle }) => {
   return (
-    <div className="header">
+    <div className={`header ${darkMode ? "" : "light"}`}>
       <p>Where in the world?</p>
       <button onClick={onModeToggle}>
         <FontAwesomeIcon

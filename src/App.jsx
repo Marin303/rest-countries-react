@@ -11,7 +11,7 @@ function App() {
   };
 
   return (
-    <div className={`App ${darkMode ? "dark" : "light"}`}>
+    <div className={`App ${darkMode ? "" : "light"}`}>
       <Header darkMode={darkMode} onModeToggle={handleModeToggle} />
       <Main darkMode={darkMode} />
     </div>
