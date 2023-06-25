@@ -25,7 +25,7 @@ const CountryRender = ({ inputValue, selectedRegion, darkMode }) => {
           <div className="descriptionWrapper">
             <p>{country.name}</p>
             <p>
-              <b>Population:</b> {country.population}
+              <b>Population:</b> {country.population.toLocaleString()}
             </p>
             <p>
               <b>Region:</b> {country.region}
