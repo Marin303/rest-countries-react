@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import jsonData from "../data.json";
 
-const CountryRender = ({ inputValue, selectedRegion }) => {
+const CountryRender = ({ inputValue, selectedRegion, darkMode }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -20,12 +20,12 @@ const CountryRender = ({ inputValue, selectedRegion }) => {
   return (
     <div className="CountryContainer">
       {filteredData.slice(0, 8).map((country, index) => (
-        <div className="CountryRender" key={index}>
+        <div className={`CountryRender ${darkMode ? "" : "light"}`} key={index}>
           <img src={country.flags.png} alt="" />
           <div className="descriptionWrapper">
             <p>{country.name}</p>
             <p>
-              <b>Population:</b> {country.population}
+              <b>Population:</b> {country.population.toLocaleString()}
             </p>
             <p>
               <b>Region:</b> {country.region}

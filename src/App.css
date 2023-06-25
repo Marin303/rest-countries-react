@@ -5,35 +5,42 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito Sans', sans-serif;
-  color: rgba(255, 255, 255, 0.8);
 }
-
+/* :root {
+  color: rgba(255, 255, 255, 0.8);
+} */
 .App {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-header {
+.header {
   display: flex;
   padding: 20px;
   justify-content: space-between;
   background-color: hsl(209, 23%, 22%);
+  box-shadow: inset rgba(0, 0, 0, 0.15) 5px -20px 20px;
 }
 
-header>p {
+.header>p {
   color: rgb(255, 255, 255);
   font-weight: 600;
   margin-left: 5px;
 }
 
-header>div {
+.header>button {
   word-spacing: 2px;
   font-size: 14px;
   margin-right: 5px;
+  background-color: transparent;
+  border: none;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.moonIcon {
+.modeIcon {
   margin-right: 5px;
 }
 
@@ -66,6 +73,7 @@ input {
   width: 90%;
   padding: 15px;
   background-color: hsl(209, 23%, 22%);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 input::placeholder {
@@ -86,6 +94,7 @@ input::placeholder {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .caretDown {
@@ -103,6 +112,7 @@ input::placeholder {
   padding: 10px;
   min-width: 100%;
   z-index: 1;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown.active {
@@ -110,6 +120,7 @@ input::placeholder {
 }
 
 .dropdown a {
+  color: rgba(255, 255, 255, 0.8);
   display: block;
   text-decoration: none;
   padding: 5px 10px;
@@ -147,6 +158,36 @@ input::placeholder {
   font-weight: 600;
   margin-bottom: 15px;
 }
+
+/*light mode styles*/
+
+.App .light {
+  background-color: rgb(250, 250, 250);
+  color: black;
+}
+
+.header.light p,
+.header.light button,
+input.light::placeholder,
+.dropdown.light a,
+.CountryRender.light p,
+.CountryRender.light b {
+  color: black;
+}
+
+.select.light,
+.inputIconWrapper.light {
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown.light {
+  background-color: white;
+}
+
+.CountryRender.light {
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
 
 @media only screen and (max-width: 480px) {
   .inputIconWrapper {
